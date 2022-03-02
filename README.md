@@ -2,13 +2,13 @@
 
 This repository gives you instruction to follow for having an auto-shutdown instance after a defined duration without any ssh connection.
 
-## 1: Shell script
+## 1 — Shell script
 
-You have to put it somewhere in your server, reachable and executable.
+You have to put it `somewhere` in your server, reachable and executable.
 
 > By default, it is set to auto shutdown instance after 3 hours (hence it is set 10800 in the condition), but you can set it diffrerently
 
-## 2: Service
+## 2 — Service
 
 You will need here to set up the service unit and timer. Follow these instructions:
 
@@ -17,6 +17,8 @@ You will need here to set up the service unit and timer. Follow these instructio
 sudo systemctl edit autoshutdown.service --full --force
 ```
 and add in the editor the content of autoshutdown.service.
+
+> do not forget to replace the command `ExecStart` by the new `somewhere` you have chosen in the first step
 
 ### Timer ⏰
 ```
