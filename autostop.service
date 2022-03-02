@@ -1,0 +1,11 @@
+# /etc/systemd/system/autostop.service
+[Unit]
+Description=Launch script for shutdown if needed
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/autostop.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+# /etc/systemd/system/autostop.timer
+[Unit]
+Description=Launch script every hour starting after 15min of booted server
+
+[Timer]
+OnBootSec=15minutes
+
+OnUnitActiveSec=60minutes
+Persistent=true
+
+[Install]
+WantedBy=timers.target
