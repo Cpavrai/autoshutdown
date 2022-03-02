@@ -12,20 +12,19 @@ You have to put it somewhere in your server, reachable and executable.
 
 You will need here to set up the service unit and timer. Follow these instructions:
 
-
-### Service
+### Service 🛎️
 ```
 sudo systemctl edit autoshutdown.service --full --force
 ```
 and add in the editor the content of autoshutdown.service.
 
-### Timer
+### Timer ⏰
 ```
 sudo systemctl edit autoshutdown.timer --full --force
 ```
 and add in the editor the content of autoshutdown.timer.
 
-### Activation
+### Activation 🏁
 ```
 sudo systemctl enable autoshutdown.timer
 sudo systemctl start autoshutdown.timer
